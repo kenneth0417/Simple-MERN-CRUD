@@ -7,7 +7,7 @@ const BlogModel = require("./models/model");
 const mongoose = require("mongoose");
 
 const URI =
-  "mongodb+srv://MERN-Proj:test1234@simple-mern.0ncpd.mongodb.net/MERN-data?retryWrites=true&w=majority";
+  "<paste your database URL here>";
 
 app.use(express.json());
 app.use(cors());
