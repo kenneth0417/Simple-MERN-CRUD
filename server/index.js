@@ -10,7 +10,12 @@ const URI =
   "mongodb+srv://MERN-Proj:test1234@simple-mern.0ncpd.mongodb.net/MERN-data?retryWrites=true&w=majority";
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://mern-application.netlify.app"],
+    credentials: true,
+  })
+);
 
 mongoose.connect(URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
@@ -69,6 +74,6 @@ app.get("/home", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
+app.listen(3002, () => {
   console.log("Listening....");
 });

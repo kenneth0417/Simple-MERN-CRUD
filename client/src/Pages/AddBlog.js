@@ -64,7 +64,7 @@ const AddBlog = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post("http://localhost:3001/add", {
+    axios.post("http://localhost:3002/add", {
       blogName: name,
       blogTitle: title,
       blogBody: body,

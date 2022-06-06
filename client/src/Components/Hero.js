@@ -20,13 +20,13 @@ const Hero = () => {
 
   const fetchData = async () => {
     const { data } = await axios
-      .get("http://localhost:3001/home")
+      .get("http://localhost:3002/home")
       .catch((err) => console.log(err));
     setBlogs(data);
   };
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`);
+    axios.delete(`http://localhost:3002/delete/${id}`);
   };
 
   useEffect(() => {

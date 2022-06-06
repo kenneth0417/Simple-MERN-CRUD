@@ -57,7 +57,7 @@ const EditCard = ({ blog }) => {
   const handleEdit = (e) => {
     e.preventDefault();
 
-    axios.put("http://localhost:3001/edit", {
+    axios.put("http://localhost:3002/edit", {
       id: blog._id,
       editName: editName,
       editTitle: editTitle,
